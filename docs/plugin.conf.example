@@ -1,0 +1,35 @@
+pluginName="plugin-bpm"
+
+mlmodels {
+  fs = "file:/"
+  path = "///mnt/glfs/mlmodels/"
+}
+
+configBasePath = "/mnt/glfs/mlmodels/conf"
+
+loglevel = "src/main/resources/loglevel.properties"
+
+apply {
+    getprocess = "bpm.conf@ot.dispatcher.plugins.bpm.commands.BpmGetProcess"
+    dropconsecutive = "ot.dispatcher.plugins.bpm.commands.BpmDropConsecutive"
+    cluster = "ot.dispatcher.plugins.bpm.commands.BpmCluster"
+    findcycles = "ot.dispatcher.plugins.bpm.commands.BpmCycles"
+    filtertoken = "ot.dispatcher.plugins.bpm.commands.BpmFilterScenario"
+    checkconformance = "bpm.conf@ot.dispatcher.plugins.bpm.commands.BpmConformance"
+    graphview = "ot.dispatcher.plugins.bpm.commands.BpmGraphView"
+    graphshow = "ot.dispatcher.plugins.bpm.commands.BpmGraphShow"
+    contains = "ot.dispatcher.plugins.bpm.commands.BpmContains"
+    formatduration = "ot.dispatcher.plugins.bpm.commands.BpmFormatDuration"
+    collecttraces = "ot.dispatcher.plugins.bpm.commands.BpmCollect"
+    checktime = "bpm.conf@ot.dispatcher.plugins.bpm.commands.BpmCheckTime"
+    readregistry = "bpm.conf@ot.dispatcher.plugins.bpm.commands.BpmReadRegistry"
+    graphprecount2 = "ot.dispatcher.plugins.bpm.commands.BpmPrecount"
+    graphpercentprecount = "ot.dispatcher.plugins.bpm.commands.BpmPrecountPercent"
+    actionprecount = "ot.dispatcher.plugins.bpm.commands.BpmActionPrecount"
+    relationprecount = "ot.dispatcher.plugins.bpm.commands.BpmRelationPrecount"
+    regionprecount = "ot.dispatcher.plugins.bpm.commands.BpmRegionPrecount"
+    ROOprecount = "ot.dispatcher.plugins.bpm.commands.BpmROOPrecount"
+    firstevprecount = "ot.dispatcher.plugins.bpm.commands.BpmFirstEvPrecount"
+    lastevprecount = "ot.dispatcher.plugins.bpm.commands.BpmLastEvPrecount"
+    remaptime = "bpm.conf@ot.dispatcher.plugins.bpm.commands.BpmRemapTime"
+}

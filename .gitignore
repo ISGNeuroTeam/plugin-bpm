@@ -1,0 +1,15 @@
+# sbt specific
+project/project/
+project/target/
+src/main/scala/refactoring
+target/
+.vscode
+.idea
+.bsp/
+.ipynb_checkpoints/
+*.zip
+*.tgz
+*.ipynb
+
+build/
+plugin-bpm-*
